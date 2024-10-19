@@ -1,3 +1,4 @@
+
 package edu.luc.etl.cs313.android.shapes.model;
 
 /**
@@ -9,10 +10,12 @@ public class Fill implements Shape {
     protected final Shape shape;
 
     public Fill(final Shape shape) {
+
         this.shape = shape;
     }
 
     public Shape getShape() {
+
         return shape;
     }
 

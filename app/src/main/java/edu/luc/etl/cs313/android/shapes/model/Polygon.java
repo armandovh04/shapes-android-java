@@ -1,3 +1,4 @@
+
 package edu.luc.etl.cs313.android.shapes.model;
 
 import java.util.List;
@@ -19,7 +20,7 @@ public class Polygon extends Group {
 
     @Override
     public <Result> Result accept(final Visitor<Result> v) {
-        // TODO your job
-        return null;
+
+        return v.onPolygon(this);
     }
 }

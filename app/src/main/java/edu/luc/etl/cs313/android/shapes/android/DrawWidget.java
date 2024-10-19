@@ -1,3 +1,4 @@
+
 package edu.luc.etl.cs313.android.shapes.android;
 
 import edu.luc.etl.cs313.android.shapes.model.*;
@@ -26,7 +27,7 @@ public class DrawWidget extends View {
     protected void onMeasure(final int widthMeasureSpec, final int heightMeasureSpec) {
         setMeasuredDimension(widthMeasureSpec, heightMeasureSpec);
     }
-    
+
     // TODO once BoundingBox and Draw are implemented, change Fixtures.simpleCircle
     // to Fixtures.complexGroup and test the app on an emulator or Android device
     // to make sure the correct figure is drawn (see Project 3 description for link)
@@ -34,7 +35,7 @@ public class DrawWidget extends View {
     @Override
     @SuppressLint("DrawAllocation")
     protected void onDraw(final Canvas canvas) {
-        final var shape = Fixtures.simpleCircle;
+        final var shape = Fixtures.complexGroup;
         final var b = shape.accept(new BoundingBox());
         canvas.translate(-b.getX(), -b.getY());
         b.accept(new Draw(canvas, paint));
